@@ -1,0 +1,338 @@
+.levels_game_screen {
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-top: $large_padding * 2;
+
+    display: none;
+
+    @media screen and (max-width: 375px) {
+        padding-top: $large_padding;
+    }
+
+    &.active {
+        display: block;
+        visibility: visible;
+    }
+
+    &.unactive {
+        display: none;
+        visibility: hidden;
+    }
+
+    .top_bar {
+        width: 400px;
+        height: 60px;
+        margin: auto;
+        margin-bottom: $large_margin * 3;
+
+        display: flex;
+        align-items: center;
+
+        background-color: $grey_dark;
+        border-radius: 10px;
+        box-shadow: inset -2px 4px 14px rgba(0, 0, 0, 0.05);
+
+        @media screen and (max-width: 375px) {
+            width: 340px;
+            height: 50px;
+
+            margin-bottom: $large_margin * 1.5;
+        }
+
+        .top_bar_content {
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+
+            font-size: $font_size_base * 1.5;
+
+            @media screen and (max-width: 375px) {
+                font-size: $font_size_base * 1.25;
+            }
+
+            span {
+                margin: 0 $large_margin * 2;
+
+                cursor: pointer;
+
+                transition: ease all 350ms;
+
+                &.active {
+                    color: $green;
+                }
+
+                &:hover {
+                    color: darken($grey_dark, 25);
+                }
+
+                @media screen and (max-width: 375px) {
+                    margin: 0 $large_margin * 1.5;
+                }
+            }
+
+            .level1 {
+                display: none;
+                visibility: hidden;
+    
+                &.active {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+    
+            .level2 {
+                display: none;
+                visibility: hidden;
+    
+                &.active {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+    
+            .level3 {
+                display: none;
+                visibility: hidden;
+    
+                &.active {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .trash_content {
+        display: none;
+        visibility: hidden;
+
+        margin-bottom: $large_margin * 2;
+
+        &.active {
+            visibility: visible;
+            display: block;
+
+            display: flex;
+            justify-content: space-around;
+
+            @media screen and (max-width: 375px) {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto auto;
+
+                margin-bottom: $normal_margin;
+            }
+
+            .trash {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                position: relative;
+
+                &.vidrio {
+                    @media screen and (max-width: 375px) {
+                        grid-area: 1 / 1 / 2 / 2;
+
+                        padding-bottom: $large_padding * 1.5;
+                    }
+                }
+
+                &.residuos {
+                    @media screen and (max-width: 375px) {
+                        grid-area: 1 / 2 / 2 / 3;
+
+                        padding-bottom: $large_padding * 1.5;
+                    }
+                }
+
+                &.organico {
+                    @media screen and (max-width: 375px) {
+                        grid-area: 2 / 1 / 3 / 2;
+
+                        padding-bottom: $large_padding * 1.5;
+                    }
+                }
+
+                &.envases {
+                    @media screen and (max-width: 375px) {
+                        grid-area: 2 / 2 / 3 / 3;
+
+                        padding-bottom: $large_padding * 1.5;
+                    }
+                }
+
+                &.papel {
+                    @media screen and (max-width: 375px) {
+                        grid-area: 3 / 1 / 4 / 2;
+
+                        padding-bottom: $large_padding * 1.5;
+                    }
+                }
+
+                &.ptolimpio {
+                    @media screen and (max-width: 375px) {
+                        grid-area: 3 / 2 / 4 / 3;
+
+                        padding-bottom: $large_padding * 1.5;
+                    }
+                }
+
+                .color {
+                    width: 50px;
+                    height: 50px;
+
+                    border-radius: 10px;
+                    box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.1);
+
+                    position: absolute;
+                    top: -10%;
+
+                    @media screen and (max-width: 375px) {
+                        width: 35px;
+                        height: 35px;
+
+                        border-radius: 6px;
+
+                        top: -10%;
+                    }
+    
+                    &.green {
+                        background-color: $green;
+                    }
+    
+                    &.orange {
+                        background-color: $orange;
+                    }
+    
+                    &.brown {
+                        background-color: $brown;
+                    }
+    
+                    &.yellow {
+                        background-color: $yellow;
+                    }
+    
+                    &.blue {
+                        background-color: $blue;
+                    }
+    
+                    &.red {
+                        background-color: $red;
+                    }
+                }
+    
+                .content {
+                    width: 200px;
+                    height: 200px;
+
+                    background-color: $grey_light;
+                    border-radius: 20px;
+                    box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.1);
+
+                    @media screen and (max-width: 375px) {
+                        width: 150px;
+                        height: 90px;
+
+                        border-radius: 10px;
+                    }
+
+                    &.full_dropzone {
+                        background-color: lighten($grey_light, 3);
+                    }
+                }
+    
+                .text {
+                    position: absolute;
+                    top: 50%;
+
+                    color: darken($grey_dark, 40);
+
+                    @media screen and (max-width: 375px) {
+                        display: none;
+                    }
+
+                    &.full_dropzone {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .trash_options {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        max-width: 70%;
+        height: 80px;
+
+        margin: auto;
+
+        border-radius: 10px;
+        background-color: $grey_dark;
+        box-shadow: inset -2px 4px 14px rgba(0, 0, 0, 0.05);
+
+        @media screen and (max-width: 375px) {
+            max-width: 90%;
+            height: 80px;
+        }
+
+        .level1 {
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+
+                display: flex;
+                justify-content: center;
+
+                .option {
+                    @include option
+                }
+            }
+        }
+
+        .level2 {
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+
+                display: flex;
+                justify-content: center;
+
+                .option {
+                    @include option
+                }
+            }
+        }
+
+        .level3 {
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+
+                display: flex;
+                justify-content: center;
+
+                .option {
+                    @include option
+                }
+            }
+        }
+    }
+}

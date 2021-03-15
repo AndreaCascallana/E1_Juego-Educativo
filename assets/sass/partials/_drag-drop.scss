@@ -1,0 +1,38 @@
+.dropzone {
+    transition: background-color 0.3s;
+}
+      
+.drop-active {
+    border-color: 2px solid $grey_dark;
+}
+    
+.drop-target {
+    border: 2px solid $grey_dark;
+}
+      
+.drag-drop {
+    display: inline-block;
+    touch-action: none;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+        
+    transition: background-color 0.3s;
+}
+      
+.drop-ok {
+    border: 2px solid $green;
+    color: $green;
+
+    span {
+        color: $green;
+    }
+}
+
+.drop-not-ok {
+    border: 2px solid $red;
+    color: $red;
+
+    span {
+        color: $red;
+    }
+}

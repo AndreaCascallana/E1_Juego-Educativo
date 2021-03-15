@@ -1,0 +1,197 @@
+.init_screen {
+    max-width: $web_width;
+    margin: auto;
+
+    padding: $large_padding * 3 0;
+
+    &.active {
+        display: block;
+        visibility: visible;
+    }
+
+    &.unactive {
+        display: none;
+        visibility: hidden;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+
+        .init {
+
+            &.active {
+                display: block;
+                visibility: visible;
+            }
+
+            &.unactive {
+                display: none;
+                visibility: hidden;
+            }
+
+            span {
+                font-size: 8rem;
+            }
+        }
+
+        .end_success {
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+            }
+
+            span {
+                font-size: 8rem;
+
+                display: none;
+
+                &.active {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .end_warning {
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+            }
+
+            span {
+                font-size: 8rem;
+
+                display: none;
+
+                &.active {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .end_danger {
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+            }
+
+            span {
+                font-size: 8rem;
+
+                display: none;
+
+                &.active {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .text_content {
+        display: flex;
+        justify-content: center;
+
+        padding: $large_padding * 3 0;
+
+        .init {
+            font-size: $font_size_base * 2.5;
+
+            &.active {
+                display: block;
+                visibility: visible;
+            }
+
+            &.unactive {
+                display: none;
+                visibility: hidden;
+            }
+
+            @media screen and (max-width: 375px) {
+                font-size: $font_size_base * 2;
+            }
+        }
+
+        .end_success {
+            font-size: $font_size_base * 2.5;
+
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+
+                @media screen and (max-width: 375px) {
+                    font-size: $font_size_base * 1.5;
+
+                    text-align: center;
+                }
+            }
+        }
+
+        .end_warning {
+            font-size: $font_size_base * 2.5;
+
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+
+                @media screen and (max-width: 375px) {
+                    font-size: $font_size_base * 1.5;
+
+                    text-align: center;
+                }
+            }
+        }
+
+        .end_danger {
+            font-size: $font_size_base * 2.5;
+
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+                
+                @media screen and (max-width: 375px) {
+                    font-size: $font_size_base * 1.5;
+
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+
+        &.active {
+            display: block;
+            visibility: visible;
+        }
+
+        &.unactive {
+            display: none;
+            visibility: hidden;
+        }
+
+        button {}
+    }
+}

@@ -1,0 +1,52 @@
+@mixin option {
+    background-color: $grey_light;
+
+    padding: $normal_padding $large_padding;
+    border-radius: 10px;
+    margin: 0 $large_margin;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: darken($grey_light, 2);
+        border: 1px solid darken($grey_dark, 8);
+    }
+
+    @media screen and (max-width: 375px) {
+        padding: $normal_padding;
+        margin: 0 $normal_margin;
+    }
+    
+    .text {
+
+        &:hover {
+            color: lighten($body_color, 20);
+        }
+
+        @media screen and (max-width: 375px) {
+            display: none;
+        }
+    }
+
+    .fa {
+        display: none;
+
+        @media screen and (max-width: 375px) {
+            display: block;
+
+            color: $body_color;
+        }
+    }
+} 
+
+@mixin active {
+    display: block;
+    visibility: visible;
+}
+
+@mixin unactive {
+    display: none;
+    visibility: hidden;
+}

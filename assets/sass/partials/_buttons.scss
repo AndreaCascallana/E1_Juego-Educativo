@@ -1,0 +1,26 @@
+button {
+    background-color: $grey_normal;
+    border: 2px solid $body_color;
+    border-radius: 6px;
+    outline: none;
+    color: $body_color;
+
+    padding: $small_padding $normal_padding;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    span {
+        color: $body_color;
+    }
+
+    .text {
+        padding-right: $normal_padding;
+
+        @media screen and (max-width: 375px) {
+            display: none;
+        }
+    }
+}

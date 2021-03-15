@@ -1,0 +1,25 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+@import 'partials/buttons';
+@import 'partials/init_screen';
+@import 'partials/levels';
+@import 'partials/drag-drop';
+@import 'partials/popup';
+
+
+
+* {
+  // border: 1px solid pink;
+}
+
+.game {
+  height: 100vh;
+  width: 100%;
+
+  background-color: $grey_normal;
+}

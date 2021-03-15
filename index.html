@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#fafafa" />
+
+        <title>Juego educativo de reciclaje</title>
+
+        <meta name="description" content="" />
+        <link rel="apple-touch-icon" href="./assets/img/recycle.png" />
+        <link rel="icon" href="./assets/img/recycle.png" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./assets/css/main.css.map" />
+
+        <!-- CDN  Interact.js -->
+        <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+        <script src="/app/main.js"></script>
+    </head>
+
+    <body>
+
+        <div class="game">
+
+            <div class="init_screen">
+
+                <div class="icons">
+
+                    <div class="init">
+                        <span class="fa fa-recycle"></span>
+                    </div>
+                    <!-- /init -->
+
+                    
+                    <div class="end_success">
+                        <span class="fa fa-globe"></span>
+                    </div>
+                    <!-- /end_success -->
+
+                    
+                    <div class="end_warning">
+                        <span class="fa fa-thumbs-up"></span>
+                    </div>
+                    <!-- /end_warning -->
+
+                    
+                    <div class="end_danger">
+                        <span class="fa fa-exclamation-triangle"></span>
+                    </div>
+                    <!-- /end_danger -->
+
+                </div>
+                <!-- /icons -->
+
+                <div class="text_content">
+
+                    <div class="init">
+                        <div>¡Aprende a reciclar!</div>
+                    </div>
+                    <!-- /init -->
+
+                    
+                    <div class="end_success">
+                        <div>¡Enhorabuena! 10 de 10 en buenx ciudadanx</div>
+                    </div>
+                    <!-- /end_success -->
+
+                    
+                    <div class="end_warning">
+                        <div>¡Casi lo tienes! Sigue trabajando</div>
+                    </div>
+                    <!-- /end_warning -->
+                    
+                    
+                    <div class="end_danger">
+                        <div>¡Estás poniendo al planeta en peligro!</div>
+                    </div>
+                    <!-- /end_danger -->
+
+                </div>
+                <!-- /text_content -->
+                
+                <div class="buttons">
+
+                    <button class="start"><span class="text">Empezar</span><span class="fa fa-play"></span></button>
+                    <button class="exit"><span class="text">Salir</span><span class="fa fa-sign-out"></span></button>
+
+                </div>
+                <!-- /buttons -->
+
+            </div>
+            <!-- /pantalla_inicio_final -->
+
+
+
+            
+            <div class="levels_game_screen">
+
+                <div class="top_bar">
+
+                    <div class="top_bar_content">
+                        <span class="fa fa-home"></span>
+
+                        <div class="level1">Nivel 1</div>
+                        <div class="level2">Nivel 2</div>
+                        <div class="level3">Nivel 3</div>
+
+                        <span class="fa fa-arrow-right"></span>
+                    </div>
+                    
+                </div>
+                <!-- /top_bar -->
+
+                <div class="trash_content">
+
+                    <div class="trash vidrio">
+                        <div class="color green"></div>
+                        <div id="vidrio" class="content dropzone"></div>
+                        <div class="text">Vidrio</div>
+                    </div>
+
+                    <div class="trash residuos">
+                        <div class="color orange"></div>
+                        <div id="residuos" class="content dropzone"></div>
+                        <div class="text">Residuos</div>
+                    </div>
+
+                    <div class="trash organico">
+                        <div class="color brown"></div>
+                        <div id="organico" class="content dropzone"></div>
+                        <div class="text">Orgánico</div>
+                    </div>
+
+                    <div class="trash envases">
+                        <div class="color yellow"></div>
+                        <div id="envases" class="content dropzone"></div>
+                        <div class="text">Envases</div>
+                    </div>
+
+                    <div class="trash papel">
+                        <div class="color blue"></div>
+                        <div id="papel" class="content dropzone"></div>
+                        <div class="text">Papel</div>
+                    </div>
+
+                    <div class="trash ptolimpio">
+                        <div class="color red"></div>
+                        <div id="ptolimpio" class="content dropzone"></div>
+                        <div class="text">Punto Limpio</div>
+                    </div>
+
+                </div>
+                <!-- /trash_content -->
+
+                <div class="trash_options">
+
+                    <div class="level1">
+                        <div id="pila" class="option drag-drop">
+                            <span class="text">Pila</span>
+                            <span class="fa fa-battery-quarter"></span>
+                        </div>
+                        <div id="limon" class="option drag-drop">
+                            <span class="text">Limón</span>
+                            <span class="fa fa-lemon-o"></span>
+                        </div>
+                    </div>
+                    <!-- /level1 -->
+
+
+
+
+                    <div class="level2">
+                        <div id="impresora" class="option drag-drop">
+                            <span class="text">Impresora</span>
+                            <span class="fa fa-print"></span>
+                        </div>
+                        <div id="libro" class="option drag-drop">
+                            <span class="text">Libro</span>
+                            <span class="fa fa-book"></span>
+                        </div>
+                        <div id="planta" class="option drag-drop">
+                            <span class="text">Planta</span>
+                            <span class="fa fa-envira"></span>
+                        </div>
+                    </div>
+                    <!-- /level2 -->
+
+
+
+
+                    <div class="level3">
+                        <div id="paraguas" class="option drag-drop">
+                            <span class="text">Paraguas</span>
+                            <span class="fa fa-umbrella"></span>
+                        </div>
+                        <div id="balon" class="option drag-drop">
+                            <span class="text">Balón</span>
+                            <span class="fa fa-futbol-o"></span>
+                        </div>
+                        <div id="botella" class="option drag-drop">
+                            <span class="text">Botella de vino</span>
+                            <span class="fa fa-glass"></span>
+                        </div>
+                        <div id="envoltorio" class="option drag-drop">
+                            <span class="text">Envoltorio de plástico</span>
+                            <span class="fa fa-shopping-bag"></span>
+                        </div>
+                    </div>
+                    <!-- /level3 -->                    
+
+                </div>
+                <!-- /trash_options -->
+
+            </div>
+            <!-- /levels_game_screen -->
+
+
+
+
+            <div class="popup">
+
+                <div class="popup_content">
+
+                    <div class="info">
+
+                        <div class="close">
+                            <span class="fa fa-times"></span>
+                        </div>
+
+                        <div class="icons">
+                            <span class="fa fa-battery-quarter"></span>
+                            <span class="fa fa-lemon-o"></span>
+                            <span class="fa fa-print"></span>
+                            <span class="fa fa-book"></span>
+                            <span class="fa fa-envira"></span>
+                            <span class="fa fa-umbrella"></span>
+                            <span class="fa fa-futbol-o"></span>
+                            <span class="fa fa-glass"></span>
+                            <span class="fa fa-shopping-bag"></span>
+                        </div>
+                        <!-- /icons -->
+
+                        <div class="text_content">
+                            <div class="text ptolimpio">Los residuos inflamables, corrosivos o explosivos deben ser tratados por gestores autorizados y por ello, con el fin de proteger nuestra salud y la del medio ambiente es necesario llevarlos a <span class="bold">puntos limpios</span> y depositarlos en contenedores específicos</div>
+                            <div class="text organico">Los desperdicios de fruta y verdura van al contenedor de restos <span class="bold">orgánicos</span>. <br> ¡De esta manera podremos reciclarlos y obtener fertilizanes naturales y energía!</div>
+                            <div class="text residuos">Los restos no aprovechables que no podemos echar en los otros contenedores van en el contenedor de <span class="bold">residuos no orgánicos</span> <br> ¡De esta manera podremos reciclarlos y obtener fertilizanes naturales y energía!</div>
+                            <div class="text envases">Aunque los envases sean de diferentes materiales (plásticos y metal), la mayoría deben ser depositados en el contenedor amarillo de <span class="bold">envases</span></div>
+                            <div class="text vidrio">El vidrio debe depositarse en el contenedor <span>verde</span> <br> ¡Es importante diferenciar vidrio de cristal! <br> El cristal contiene plomo por lo que debe ser llevado a un punto limpio</div>
+                            <div class="text papel">El papel y el cartón deben depositarse siempre plegados en el contenedor <span>azul</span></div>
+                        </div>
+                        <!-- /text_content -->
+                        
+                    </div>
+                    <!-- /info -->
+
+                </div>
+                <!-- /popup_content -->
+
+            </div>
+            <!-- /popup -->
+
+            <div class="velo"></div>
+            <!-- /velo -->
+
+        </div>
+
+    </body>
+</html>
